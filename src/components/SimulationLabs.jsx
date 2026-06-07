@@ -90,6 +90,143 @@ export default function SimulationLabs({ completeQuest, addXP, addDiamonds }) {
   const [simMessage, setSimMessage] = useState('');
   const simInterval = useRef(null);
 
+  // Live Market Arena State
+  const [liveSymbol, setLiveSymbol] = useState('AAPL');
+  const [liveInputSymbol, setLiveInputSymbol] = useState('AAPL');
+  const [livePrice, setLivePrice] = useState(null);
+  const [liveHistory, setLiveHistory] = useState([]);
+  const [liveStats, setLiveStats] = useState({
+    open: null,
+    high: null,
+    low: null,
+    prevClose: null,
+    change: null,
+    changePercent: null
+  });
+  const [liveError, setLiveError] = useState(null);
+  const [liveIsLoading, setLiveIsLoading] = useState(false);
+  const [liveCash, setLiveCash] = useState(100000);
+  const [liveShares, setLiveShares] = useState(0);
+  const [liveTerminalMessage, setLiveTerminalMessage] = useState('System ready. Enter ticker symbol to synchronize data link.');
+  const POPULAR_TICKERS = ['AAPL', 'TSLA', 'NVDA', 'MSFT'];
+
+  const fetchLiveQuote = async (symbolToFetch) => {
+    const sym = symbolToFetch.toUpperCase().trim();
+    if (!sym) return;
+    
+    const apiKey = import.meta.env.VITE_FINNHUB_API_KEY || 'd8ireopr01qleudfgqn0d8ireopr01qleudfgqng';
+    
+    try {
+      const res = await fetch(`https://finnhub.io/api/v1/quote?symbol=${sym}&token=${apiKey}`);
+      const data = await res.json();
+      
+      if (!data || data.c === 0) {
+        setLiveError(`Symbol "${sym}" not found or no market data available.`);
+        return;
+      }
+      
+      setLiveError(null);
+      setLivePrice(data.c);
+      setLiveStats({
+        open: data.o,
+        high: data.h,
+        low: data.l,
+        prevClose: data.pc,
+        change: data.d,
+        changePercent: data.dp
+      });
+      
+      setLiveHistory((prev) => {
+        const nextHist = [...prev, data.c];
+        if (nextHist.length > 20) nextHist.shift();
+        return nextHist;
+      });
+    } catch (err) {
+      console.error(err);
+      setLiveError('Failed to synchronize with Finnhub network node.');
+    }
+  };
+
+  useEffect(() => {
+    if (activeLab !== 'live-market' || !liveSymbol) return;
+    
+    setLiveIsLoading(true);
+    fetchLiveQuote(liveSymbol).finally(() => setLiveIsLoading(false));
+    
+    const interval = setInterval(() => {
+      fetchLiveQuote(liveSymbol);
+    }, 5000);
+    
+    return () => clearInterval(interval);
+  }, [activeLab, liveSymbol]);
+
+  const handleSearchSymbol = (e) => {
+    e.preventDefault();
+    const cleanSym = liveInputSymbol.trim().toUpperCase();
+    if (!cleanSym) return;
+    setLiveSymbol(cleanSym);
+    setLiveHistory([]);
+    setLiveShares(0);
+    setLiveTerminalMessage(`Search initialized: Synchronizing node with ticker ${cleanSym}...`);
+  };
+
+  const handleQuickSelect = (sym) => {
+    setLiveInputSymbol(sym);
+    setLiveSymbol(sym);
+    setLiveHistory([]);
+    setLiveShares(0);
+    setLiveTerminalMessage(`Quick-select initialized: Synchronizing ${sym}...`);
+  };
+
+  const handleLiveBuy = () => {
+    if (!livePrice) return;
+    if (liveCash < livePrice) {
+      setLiveTerminalMessage('Error: Insufficient liquidity to execute buy order.');
+      return;
+    }
+    const sharesToBuy = Math.floor(liveCash / livePrice);
+    if (sharesToBuy === 0) {
+      setLiveTerminalMessage('Error: Liquid cash insufficient for even 1 unit.');
+      return;
+    }
+    const cost = sharesToBuy * livePrice;
+    setLiveShares((prev) => prev + sharesToBuy);
+    setLiveCash((prev) => parseFloat((prev - cost).toFixed(2)));
+    setLiveTerminalMessage(`Executed BUY order: +${sharesToBuy} units of ${liveSymbol} at $${livePrice}.`);
+    addXP(100);
+  };
+
+  const handleLiveSell = () => {
+    if (liveShares === 0) {
+      setLiveTerminalMessage(`Error: No active shares of ${liveSymbol} held in portfolio.`);
+      return;
+    }
+    const revenue = liveShares * livePrice;
+    setLiveShares(0);
+    setLiveCash((prev) => parseFloat((prev + revenue).toFixed(2)));
+    setLiveTerminalMessage(`Executed SELL order: sold all units of ${liveSymbol} at $${livePrice} for $${revenue.toLocaleString(undefined, {minimumFractionDigits: 2})}.`);
+    addXP(150);
+  };
+
+  const getSvgPathForLive = () => {
+    if (liveHistory.length < 2) return '';
+    const min = Math.min(...liveHistory);
+    const max = Math.max(...liveHistory);
+    const range = max - min === 0 ? 1 : max - min;
+    
+    return liveHistory.map((val, idx) => {
+      const x = (idx / (liveHistory.length - 1)) * 200;
+      const y = 90 - ((val - min) / range) * 80;
+      return `${idx === 0 ? 'M' : 'L'} ${x} ${y}`;
+    }).join(' ');
+  };
+
+  const getSvgFillPathForLive = () => {
+    const linePath = getSvgPathForLive();
+    if (!linePath) return '';
+    return `${linePath} L 200 100 L 0 100 Z`;
+  };
+
   // ------------------------------------------
   // Dynamic Allocator calculations
   // ------------------------------------------
@@ -266,6 +403,12 @@ export default function SimulationLabs({ completeQuest, addXP, addDiamonds }) {
           onClick={() => { endSimulation(); setActiveTab('allocator'); }}
         >
           Portfolio Allocation Lab
+        </button>
+        <button 
+          className={`lab-tab-btn ${activeLab === 'live-market' ? 'active' : ''}`}
+          onClick={() => { endSimulation(); setActiveTab('live-market'); }}
+        >
+          Live Market Arena
         </button>
       </div>
 
@@ -506,6 +649,186 @@ export default function SimulationLabs({ completeQuest, addXP, addDiamonds }) {
               </div>
             </div>
           </div>
+        </div>
+      )}
+
+      {/* 3. LIVE MARKET ARENA VIEW */}
+      {activeLab === 'live-market' && (
+        <div className="labs-live-market glass-card">
+          <div className="live-market-header">
+            <span className="subtitle neon-text">LIVE EXCHANGE CONNECT</span>
+            <h2 className="title">LIVE MARKET ARENA</h2>
+            <p className="desc">
+              Synchronize connections with real-time global stock networks via Finnhub API. 
+              Search any ticker, trace ticking price curves, and test order execution parameters using virtual cash reserves.
+            </p>
+          </div>
+
+          {/* Search & Selector Bar */}
+          <div className="live-search-bar neon-border">
+            <form onSubmit={handleSearchSymbol} className="search-form">
+              <div className="search-input-group">
+                <label className="cyber-label search-label">TICKER SYMBOL</label>
+                <input
+                  type="text"
+                  className="cyber-input search-input"
+                  placeholder="e.g. AAPL, TSLA, NVDA"
+                  value={liveInputSymbol}
+                  onChange={(e) => setLiveInputSymbol(e.target.value)}
+                />
+              </div>
+              <button type="submit" className="cyber-btn sync-btn">
+                SYNCHRONIZE NODE
+              </button>
+            </form>
+
+            <div className="quick-select-tickers">
+              <span className="qs-label">QUICK SYNCS:</span>
+              {POPULAR_TICKERS.map((sym) => (
+                <button
+                  key={sym}
+                  className={`qs-tag ${liveSymbol === sym ? 'active' : ''}`}
+                  onClick={() => handleQuickSelect(sym)}
+                >
+                  {sym}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {liveIsLoading && liveHistory.length === 0 ? (
+            <div className="live-loading-spinner flex-center">
+              <div className="spinner-glow animate-pulse-slow">SYNCHRONIZING SECURE PORT CONNECTION...</div>
+            </div>
+          ) : (
+            <div className="live-market-workspace">
+              {/* Left Column: Live Chart */}
+              <div className="live-chart-card glass-card">
+                <div className="chart-header-bar">
+                  <span className="live-feed-indicator">
+                    <span className="live-dot animate-pulse-slow"></span>
+                    FEED: ACTIVE (5S POLLING)
+                  </span>
+                  <span className="ticker-label neon-text">{liveSymbol} INDEX</span>
+                </div>
+
+                {liveError ? (
+                  <div className="live-error-box text-error flex-center">
+                    <span className="error-icon">⚠️</span>
+                    <p className="error-msg">{liveError}</p>
+                  </div>
+                ) : (
+                  <div className="live-chart-canvas">
+                    {liveHistory.length < 2 ? (
+                      <div className="awaiting-data flex-center">
+                        <p className="neon-text-accent">AWAITING TRANSACTIONS TO VECTOR PLOT CURVE...</p>
+                      </div>
+                    ) : (
+                      <svg width="100%" height="100%" viewBox="0 0 200 100" preserveAspectRatio="none">
+                        <defs>
+                          <linearGradient id="live-grad" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stopColor="rgba(0, 255, 255, 0.2)" />
+                            <stop offset="100%" stopColor="rgba(2, 6, 23, 0)" />
+                          </linearGradient>
+                        </defs>
+                        {/* Fill */}
+                        <path
+                          d={getSvgFillPathForLive()}
+                          fill="url(#live-grad)"
+                        />
+                        {/* Line */}
+                        <path
+                          d={getSvgPathForLive()}
+                          fill="none"
+                          stroke="var(--primary)"
+                          strokeWidth="2"
+                        />
+                      </svg>
+                    )}
+                  </div>
+                )}
+                
+                {/* Statistics Row */}
+                <div className="live-stats-row">
+                  <div className="ls-box">
+                    <span className="ls-lbl">DAY OPEN</span>
+                    <span className="ls-val">${liveStats.open ? liveStats.open.toFixed(2) : '---'}</span>
+                  </div>
+                  <div className="ls-box">
+                    <span className="ls-lbl">DAY HIGH</span>
+                    <span className="ls-val">${liveStats.high ? liveStats.high.toFixed(2) : '---'}</span>
+                  </div>
+                  <div className="ls-box">
+                    <span className="ls-lbl">DAY LOW</span>
+                    <span className="ls-val">${liveStats.low ? liveStats.low.toFixed(2) : '---'}</span>
+                  </div>
+                  <div className="ls-box">
+                    <span className="ls-lbl">NET CHANGE</span>
+                    <span className={`ls-val ${liveStats.changePercent >= 0 ? 'text-success' : 'text-error'}`}>
+                      {liveStats.changePercent >= 0 ? '+' : ''}
+                      {liveStats.changePercent ? liveStats.changePercent.toFixed(2) : '0.00'}%
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right Column: Order Desk & Stats */}
+              <div className="live-controls-card">
+                {/* Stats Summary */}
+                <div className="live-balance-summary glass-card">
+                  <h4 className="card-subtitle">LIQUID ACCOUNT PROFILE</h4>
+                  <div className="live-balance-row">
+                    <span className="lbl">VIRTUAL CASH</span>
+                    <span className="val neon-text">${liveCash.toLocaleString(undefined, {minimumFractionDigits: 2})}</span>
+                  </div>
+                  <div className="live-balance-row">
+                    <span className="lbl">SHARES HELD</span>
+                    <span className="val">{liveShares} Units</span>
+                  </div>
+                  <div className="live-balance-row">
+                    <span className="lbl">EQUITY VALUE</span>
+                    <span className="val neon-text-accent">${(liveShares * (livePrice || 0)).toLocaleString(undefined, {minimumFractionDigits: 2})}</span>
+                  </div>
+                  <div className="live-balance-row border-top">
+                    <span className="lbl">TOTAL VALUE</span>
+                    <span className="val text-success">${(liveCash + liveShares * (livePrice || 0)).toLocaleString(undefined, {minimumFractionDigits: 2})}</span>
+                  </div>
+                </div>
+
+                {/* Trading Actions */}
+                <div className="live-order-desk glass-card">
+                  <h4 className="card-subtitle">LIVE ORDER TERMINAL</h4>
+                  <div className="live-price-indicator">
+                    <span className="lpi-lbl">CURRENT QUOTE PRICE</span>
+                    <span className="lpi-val neon-text">${livePrice ? livePrice.toFixed(2) : '---'}</span>
+                  </div>
+
+                  <div className="order-desk-actions">
+                    <button 
+                      className="cyber-btn buy-btn"
+                      onClick={handleLiveBuy}
+                      disabled={!livePrice || liveCash < livePrice}
+                    >
+                      EXECUTE MARKET BUY
+                    </button>
+                    <button 
+                      className="cyber-btn sell-btn cyber-btn-secondary"
+                      onClick={handleLiveSell}
+                      disabled={liveShares === 0 || !livePrice}
+                    >
+                      EXECUTE MARKET SELL
+                    </button>
+                  </div>
+
+                  {liveTerminalMessage && (
+                    <div className="sim-terminal-output neon-border live-terminal">
+                      <div className="term-line">&gt; {liveTerminalMessage}</div>
+                    </div>
+                  )}
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       )}
     </div>
