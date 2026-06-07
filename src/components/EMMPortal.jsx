@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './EMMPortal.css';
 
 const DEMO_REPORT = {
@@ -13,6 +13,61 @@ const DEMO_REPORT = {
 export default function EMMPortal({ emmReport, onViewChange }) {
   // Use actual failed report if available, else fallback to demo
   const report = emmReport || DEMO_REPORT;
+  const [dynamicInsight, setDynamicInsight] = useState(null);
+  const [isLoadingInsight, setIsLoadingInsight] = useState(false);
+
+  useEffect(() => {
+    const fetchDynamicInsight = async () => {
+      const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
+      if (!apiKey) return;
+
+      setIsLoadingInsight(true);
+      const modelName = import.meta.env.VITE_GEMINI_MODEL || 'gemini-3.5-flash';
+      
+      const emmPrompt = `You are Sentinel AI, the risk management forensic engine of ArthaQuest.
+Analyze this failed simulation trade logs and write a brief (2-3 sentences), highly sharp, professional corrective critique:
+- Quest ID: "${report.questId}"
+- Final Return: -${report.finalLossPercent}%
+- Stated Cause of Failure: "${report.whatWentWrong}"
+
+Explain precisely the mathematical error (such as overexposure, high Beta volatility, lack of hedging, or delayed reaction) and provide one clear tactical rule they must execute next time to survive. Speak in a cool, slightly futuristic cyberpunk tone. Return ONLY the critique, no greetings, no introductory text, no quotes.`;
+
+      try {
+        let url = `https://generativelanguage.googleapis.com/v1beta/models/${modelName}:generateContent?key=${apiKey}`;
+        let res = await fetch(url, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            contents: [{ parts: [{ text: emmPrompt }] }]
+          })
+        });
+
+        if (!res.ok) {
+          // Fallback to gemini-1.5-flash
+          url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`;
+          res = await fetch(url, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              contents: [{ parts: [{ text: emmPrompt }] }]
+            })
+          });
+        }
+
+        if (res.ok) {
+          const data = await res.json();
+          const botText = data.candidates[0].content.parts[0].text;
+          setDynamicInsight(botText.trim());
+        }
+      } catch (err) {
+        console.error(err);
+      } finally {
+        setIsLoadingInsight(false);
+      }
+    };
+
+    fetchDynamicInsight();
+  }, [report]);
 
   return (
     <div className="emm-container">
@@ -105,7 +160,11 @@ export default function EMMPortal({ emmReport, onViewChange }) {
             </div>
             
             <p className="aic-body">
-              "{report.aiInsight}"
+              {isLoadingInsight ? (
+                "Sentinel AI parsing memory dump and generating post-mortem analysis..."
+              ) : (
+                dynamicInsight ? `"${dynamicInsight}"` : `"${report.aiInsight}"`
+              )}
             </p>
             
             <div className="aic-metrics">

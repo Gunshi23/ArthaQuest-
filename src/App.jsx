@@ -9,6 +9,8 @@ import SimulationLabs from './components/SimulationLabs';
 import Missions from './components/Missions';
 import EMMPortal from './components/EMMPortal';
 import ProgressProfile from './components/ProgressProfile';
+import Chatbot from './components/Chatbot';
+
 
 function App() {
   const {
@@ -146,6 +148,7 @@ function App() {
           </main>
         </div>
       )}
+      <Chatbot />
     </>
   );
 }
