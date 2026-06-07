@@ -1,0 +1,554 @@
+.labs-container {
+  padding: 105px 20px 105px 20px;
+  max-width: 1360px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* Labs Tabs Header */
+.labs-tabs {
+  display: flex;
+  height: 60px;
+  padding: 0 10px;
+  align-items: center;
+  gap: 15px;
+}
+
+.lab-tab-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-family: var(--font-cyber);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 8px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.lab-tab-btn:hover {
+  color: var(--text-main);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.lab-tab-btn.active {
+  color: var(--primary);
+  background: rgba(0, 255, 255, 0.05);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.1);
+}
+
+/* Labs Overview */
+.labs-overview {
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.labs-title-section {
+  text-align: center;
+}
+
+.labs-title-section .subtitle {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.labs-title-section .title {
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.labs-title-section .desc {
+  font-size: 14px;
+  color: var(--text-muted);
+  max-width: 650px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* Scenarios Grid */
+.scenarios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.scenario-card {
+  border: 1px solid var(--border-color);
+  background: rgba(15, 23, 42, 0.45);
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+  transition: var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.scenario-card:hover {
+  background: var(--bg-card-hover);
+  border-color: rgba(0, 255, 255, 0.35);
+  transform: translateY(-3px);
+}
+
+.scenario-card.active {
+  border-color: var(--primary);
+  background: rgba(15, 23, 42, 0.75);
+  box-shadow: 0 0 15px var(--primary-glow);
+}
+
+.scenario-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sc-difficulty {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.sc-trend {
+  font-size: 9px;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.sc-title {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.sc-desc {
+  font-size: 12.5px;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.sc-click-indicator {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: transparent;
+  border: 1.5px solid var(--border-color);
+  transition: var(--transition-fast);
+}
+
+.scenario-card.active .sc-click-indicator {
+  background: var(--primary);
+  border-color: var(--primary);
+  box-shadow: 0 0 8px var(--primary);
+}
+
+/* Scenario Details Panel */
+.scenario-details-panel {
+  padding: 30px;
+  background: rgba(0, 255, 255, 0.01);
+  border-color: rgba(0, 255, 255, 0.2) !important;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sd-title {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 12px;
+}
+
+.sd-info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.sd-info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sd-lbl {
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 1.5px;
+}
+
+.sd-val {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.sd-bullets-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  background: rgba(15, 23, 42, 0.3);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.sdb-col {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sdb-title {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.sdb-col ul {
+  padding-left: 20px;
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.sdb-desc {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.start-sim-btn {
+  width: 100%;
+  padding: 14px 0;
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+/* Active Simulation Interface */
+.active-sim-panel {
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.sim-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 15px;
+}
+
+.sim-badge {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.sim-timer {
+  font-size: 12px;
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 4px 12px;
+  border-radius: 4px;
+  letter-spacing: 1px;
+}
+
+.sim-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.ss-item {
+  background: rgba(1, 4, 15, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 15px 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ss-lbl {
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 1.5px;
+}
+
+.ss-val {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.sim-body-row {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 25px;
+  min-height: 280px;
+}
+
+.sim-chart-container {
+  background: rgba(1, 4, 15, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.scc-header {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: var(--text-muted);
+  margin-bottom: 15px;
+}
+
+.live-chart-canvas {
+  flex: 1;
+  width: 100%;
+}
+
+.live-chart-canvas svg {
+  overflow: visible;
+}
+
+.sim-trade-controls {
+  background: rgba(15, 23, 42, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 24px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.stc-title {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  padding-bottom: 8px;
+}
+
+.cash-balance {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.stc-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.buy-trade-btn,
+.sell-trade-btn {
+  font-size: 11px;
+  padding: 12px 0;
+  width: 100%;
+}
+
+.sim-terminal-output {
+  background: rgba(1, 4, 15, 0.8);
+  border-color: rgba(0, 255, 255, 0.2) !important;
+  padding: 12px 18px;
+  border-radius: 6px;
+  min-height: 55px;
+  display: flex;
+  align-items: center;
+  font-family: monospace;
+}
+
+.term-line {
+  font-size: 12px;
+  color: var(--primary);
+  line-height: 1.4;
+}
+
+/* 2. Portfolio Allocator View Styles */
+.labs-allocator {
+  padding: 35px;
+}
+
+.allocator-header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.allocator-header .subtitle {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.allocator-header .title {
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.allocator-header .desc {
+  font-size: 14px;
+  color: var(--text-muted);
+  max-width: 650px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+.allocator-workspace {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 35px;
+}
+
+.allocator-sliders {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.work-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  letter-spacing: 0.5px;
+}
+
+.alloc-slider-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sector-group {
+  margin-top: 10px;
+}
+
+.cyber-select {
+  width: 100%;
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid var(--border-color);
+  padding: 12px;
+  border-radius: 6px;
+  color: var(--text-main);
+  font-family: var(--font-cyber);
+  font-size: 14px;
+  outline: none;
+  cursor: pointer;
+}
+
+.cyber-select option {
+  background: var(--bg-main);
+  color: var(--text-main);
+}
+
+.allocator-metrics {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.health-gauge {
+  padding: 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.hg-title {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 1.5px;
+}
+
+.hg-score {
+  font-size: 52px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.metrics-side-panels {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.metric-panel {
+  background: rgba(15, 23, 42, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 15px 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: center;
+}
+
+.mp-lbl {
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 1.5px;
+}
+
+.mp-val {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* Responsive adjust */
+@media (max-width: 900px) {
+  .allocator-workspace {
+    grid-template-columns: 1fr;
+  }
+  .sim-body-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .sd-info-grid {
+    grid-template-columns: 1fr;
+  }
+  .sd-bullets-section {
+    grid-template-columns: 1fr;
+  }
+  .sim-stats-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .metrics-side-panels {
+    grid-template-columns: 1fr;
+  }
+}

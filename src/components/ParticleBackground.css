@@ -1,0 +1,131 @@
+.particle-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  background-color: var(--bg-main);
+}
+
+.radial-glow-top {
+  position: absolute;
+  top: -20%;
+  left: 20%;
+  width: 60vw;
+  height: 60vw;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.08) 0%, rgba(2, 6, 23, 0) 70%);
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+.radial-glow-bottom {
+  position: absolute;
+  bottom: -20%;
+  right: 10%;
+  width: 70vw;
+  height: 70vw;
+  background: radial-gradient(circle, rgba(0, 255, 255, 0.06) 0%, rgba(2, 6, 23, 0) 70%);
+  filter: blur(100px);
+  pointer-events: none;
+}
+
+.particle-svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+/* Floating animation wrapper that handles coordinates */
+.floating-shape-wrapper {
+  animation-name: drift;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+/* Specific rotation styles based on shape type */
+.torus-animate svg {
+  animation: spin-slow 25s linear infinite;
+}
+
+.wireframe-animate svg {
+  animation: rotate-3d 30s linear infinite;
+}
+
+.cube-animate svg {
+  animation: spin-opposite 40s linear infinite;
+}
+
+.sphere-animate svg {
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
+/* Keyframe Animations */
+@keyframes drift {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.15;
+  }
+  25% {
+    opacity: 0.45;
+  }
+  50% {
+    transform: translate(30px, -40px) scale(1.08);
+    opacity: 0.3;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.15;
+  }
+}
+
+@keyframes spin-slow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-opposite {
+  0% {
+    transform: rotate(360deg) scale(0.9);
+  }
+  50% {
+    transform: rotate(180deg) scale(1);
+  }
+  100% {
+    transform: rotate(0deg) scale(0.9);
+  }
+}
+
+@keyframes rotate-3d {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  50% {
+    transform: rotateX(180deg) rotateY(90deg) rotateZ(180deg);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(180deg) rotateZ(360deg);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    transform: scale(0.95);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.85;
+  }
+}

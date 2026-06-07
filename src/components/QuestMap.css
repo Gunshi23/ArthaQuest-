@@ -1,0 +1,842 @@
+.quest-container {
+  padding: 105px 20px 105px 20px;
+  max-width: 1360px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* 1. Quest Map Overview Styles */
+.quest-map-view {
+  padding: 40px;
+}
+
+.quest-map-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.quest-map-header .subtitle {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.quest-map-header .title {
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.quest-map-header .desc {
+  font-size: 14px;
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+.quest-timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 28px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.quest-node {
+  display: flex;
+  align-items: center;
+  margin-bottom: 35px;
+  position: relative;
+  padding-left: 70px;
+  transition: var(--transition-normal);
+}
+
+.node-number {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: var(--bg-main);
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 700;
+  z-index: 2;
+  transition: var(--transition-normal);
+}
+
+.quest-node.unlocked .node-number {
+  border-color: var(--primary);
+  box-shadow: 0 0 10px var(--primary-glow);
+  color: var(--primary);
+}
+
+.quest-node.completed .node-number {
+  border-color: var(--success);
+  box-shadow: 0 0 10px rgba(16, 185, 129, 0.3);
+  color: var(--success);
+  background: rgba(16, 185, 129, 0.05);
+}
+
+.node-details {
+  flex: 1;
+}
+
+.node-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  letter-spacing: 0.5px;
+}
+
+.node-desc {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.4;
+  margin-bottom: 8px;
+  max-width: 500px;
+}
+
+.node-meta {
+  display: flex;
+  gap: 12px;
+}
+
+.xp-tag {
+  font-size: 10px;
+  font-weight: 700;
+  background: rgba(0, 255, 255, 0.08);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  color: var(--primary);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.badge-tag {
+  font-size: 10px;
+  font-weight: 700;
+  background: rgba(236, 72, 153, 0.08);
+  border: 1px solid rgba(236, 72, 153, 0.2);
+  color: var(--secondary);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.node-action-btn {
+  font-size: 11px;
+  padding: 8px 16px;
+  letter-spacing: 1px;
+}
+
+.quest-node.completed .node-action-btn {
+  border-color: var(--success);
+  color: var(--success);
+}
+
+.quest-node.completed .node-action-btn:hover {
+  background: var(--success);
+  color: var(--bg-main);
+  box-shadow: 0 0 12px rgba(16, 185, 129, 0.4);
+}
+
+/* 2. Active Quest Screen Defaults */
+.active-quest-screen {
+  padding: 35px;
+  min-height: 480px;
+  display: flex;
+  flex-direction: column;
+}
+
+.active-quest-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 15px;
+  margin-bottom: 25px;
+}
+
+.quest-tag {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.close-quest-btn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--text-muted);
+  padding: 5px 12px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.close-quest-btn:hover {
+  border-color: #ef4444;
+  color: #ef4444;
+}
+
+/* Beginner Quest Slides */
+.quest-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.slide-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+.slide-desc {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.concept-box {
+  background: rgba(0, 255, 255, 0.02);
+  border-color: rgba(0, 255, 255, 0.25) !important;
+  padding: 24px 30px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin-bottom: 30px;
+}
+
+.concept-header {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 12px;
+}
+
+.concept-body {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--text-main);
+  margin-bottom: 14px;
+}
+
+.concept-body:last-child {
+  margin-bottom: 0;
+}
+
+.next-slide-btn {
+  padding: 12px 35px;
+  font-size: 13px;
+}
+
+/* Quiz Box styles */
+.quiz-box {
+  width: 100%;
+  max-width: 580px;
+  margin-bottom: 25px;
+}
+
+.quiz-question {
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+
+.quiz-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.quiz-opt-btn {
+  background: rgba(15, 23, 42, 0.5);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  padding: 16px;
+  border-radius: 8px;
+  font-family: var(--font-cyber);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: var(--transition-normal);
+}
+
+.quiz-opt-btn:hover:not(:disabled) {
+  background: var(--bg-card-hover);
+  border-color: var(--primary);
+  box-shadow: 0 0 10px var(--primary-glow);
+}
+
+.quiz-opt-btn.selected {
+  border-color: var(--primary);
+  background: rgba(0, 255, 255, 0.05);
+}
+
+.quiz-feedback {
+  padding: 16px 20px;
+  border-radius: 8px;
+  border: 1px solid;
+  margin-top: 20px;
+  font-size: 13.5px;
+  line-height: 1.5;
+}
+
+.correct-feedback {
+  background: rgba(16, 185, 129, 0.05);
+  border-color: var(--success);
+}
+
+.correct-feedback .feedback-status {
+  color: var(--success);
+  font-weight: 700;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.incorrect-feedback {
+  background: rgba(239, 68, 68, 0.05);
+  border-color: var(--error);
+}
+
+.incorrect-feedback .feedback-status {
+  color: var(--error);
+  font-weight: 700;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.retry-btn {
+  margin-top: 12px;
+  font-size: 10px;
+  padding: 6px 15px;
+}
+
+.finish-quest-btn {
+  padding: 12px 40px;
+  font-size: 13px;
+}
+
+/* 3. Market Survival Simulation Styles */
+.survival-dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+}
+
+.survival-meta-panels {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.sm-panel {
+  background: rgba(15, 23, 42, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 12px 18px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.smp-label {
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 1.5px;
+}
+
+.smp-value {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.survival-body {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 20px;
+  flex: 1;
+}
+
+.survival-chart-section {
+  background: rgba(1, 4, 15, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  min-height: 280px;
+}
+
+.chart-title-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+  margin-bottom: 15px;
+}
+
+.timer-badge {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.live-chart-container {
+  flex: 1;
+  width: 100%;
+  position: relative;
+}
+
+.live-chart-container svg {
+  overflow: visible;
+}
+
+.survival-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.allocation-status {
+  background: rgba(15, 23, 42, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.as-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.as-desc {
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.4;
+  margin-top: 10px;
+}
+
+.action-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.q-action-btn {
+  font-size: 11px;
+  padding: 12px 0;
+  width: 100%;
+}
+
+.simulation-end {
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid;
+  text-align: center;
+}
+
+.success-end {
+  background: rgba(16, 185, 129, 0.05);
+  border-color: var(--success);
+}
+
+.failed-end {
+  background: rgba(239, 68, 68, 0.05);
+  border-color: var(--error);
+}
+
+.end-title {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 10px;
+}
+
+.end-desc {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.end-actions {
+  display: flex;
+  gap: 15px;
+}
+
+.end-actions button {
+  flex: 1;
+  font-size: 11px;
+}
+
+.return-btn {
+  font-size: 11px;
+  padding: 10px 25px;
+  margin-top: 8px;
+}
+
+/* 4. SIP Machine Layout Styles */
+.sip-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 30px;
+  flex: 1;
+}
+
+.sip-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sip-title {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.sip-desc {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.slider-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.slider-labels {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slider-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+}
+
+.slider-value {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.cyber-slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  outline: none;
+  transition: var(--transition-fast);
+}
+
+.cyber-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--primary);
+  box-shadow: 0 0 8px var(--primary);
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.cyber-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+.compounding-results {
+  background: rgba(15, 23, 42, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.res-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+}
+
+.res-lbl {
+  color: var(--text-muted);
+}
+
+.res-val {
+  font-weight: 700;
+}
+
+.complete-sip-btn {
+  font-size: 12px;
+  padding: 12px 0;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.sip-success-banner {
+  background: rgba(16, 185, 129, 0.05);
+  border: 1px solid var(--success);
+  border-radius: 8px;
+  padding: 18px;
+  text-align: center;
+}
+
+.sip-success-banner span {
+  font-size: 13px;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.sip-success-banner p {
+  font-size: 12.5px;
+  color: var(--text-muted);
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
+
+.sip-success-banner button {
+  font-size: 10px;
+  padding: 6px 18px;
+}
+
+/* Shock Popups & Bars Visualizer */
+.sip-visualization {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.compounding-shock-card {
+  padding: 24px;
+  background: linear-gradient(135deg, rgba(236, 72, 153, 0.08) 0%, rgba(139, 92, 246, 0.03) 100%);
+  border-color: rgba(236, 72, 153, 0.45) !important;
+  box-shadow: 0 0 20px rgba(236, 72, 153, 0.15) !important;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 450px;
+  z-index: 5;
+}
+
+.shock-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.shock-icon {
+  font-size: 18px;
+}
+
+.shock-tag {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.shock-title {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.shock-body {
+  font-size: 13px;
+  color: var(--text-main);
+  line-height: 1.4;
+}
+
+.shock-body strong {
+  color: var(--secondary);
+}
+
+.shock-comparison {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin: 5px 0;
+}
+
+.sc-box {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 10px 14px;
+  border-radius: 6px;
+  text-align: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sc-box.active {
+  border-color: var(--secondary);
+  box-shadow: 0 0 10px rgba(236, 72, 153, 0.2);
+}
+
+.sc-lbl {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.sc-val {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.sc-arrow {
+  color: var(--text-muted);
+  font-weight: bold;
+}
+
+.shock-footer {
+  font-size: 12.5px;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.shock-footer strong {
+  color: var(--primary);
+}
+
+.close-shock-btn {
+  font-size: 10px;
+  padding: 10px 0;
+  width: 100%;
+}
+
+.sip-placeholder-viz {
+  width: 100%;
+  max-width: 400px;
+  padding: 24px;
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+  background: rgba(1, 4, 15, 0.7);
+}
+
+.curve-header {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: var(--text-muted);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.wealth-bar-chart {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 30px;
+  flex: 1;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.wbar {
+  width: 70px;
+  border-radius: 4px 4px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 10px;
+  transition: height 0.4s ease;
+}
+
+.invested-bar {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.returns-bar {
+  background: linear-gradient(0deg, var(--primary), var(--accent));
+  border: 1px solid var(--primary);
+  box-shadow: 0 0 15px var(--primary-glow);
+}
+
+.wb-lbl {
+  font-size: 10px;
+  letter-spacing: 0.5px;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  color: var(--text-main);
+}
+
+.viz-footnote {
+  font-size: 11px;
+  color: var(--text-muted);
+  text-align: center;
+  line-height: 1.3;
+}
+
+/* Responsiveness for Quest Screen */
+@media (max-width: 900px) {
+  .survival-body {
+    grid-template-columns: 1fr;
+  }
+  .sip-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .survival-meta-panels {
+    grid-template-columns: 1fr 1fr;
+  }
+  .quiz-options {
+    grid-template-columns: 1fr;
+  }
+}

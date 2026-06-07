@@ -1,0 +1,659 @@
+.missions-container {
+  padding: 105px 20px 105px 20px;
+  max-width: 1360px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Missions Hub Overview */
+.missions-hub {
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.missions-header {
+  text-align: center;
+}
+
+.missions-header .subtitle {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.missions-header .title {
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.missions-header .desc {
+  font-size: 14px;
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* Missions Stack list */
+.missions-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.mission-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 28px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  background: rgba(15, 23, 42, 0.45);
+  transition: var(--transition-normal);
+}
+
+.mission-card:hover {
+  background: var(--bg-card-hover);
+  border-color: rgba(0, 255, 255, 0.3);
+  transform: translateX(4px);
+}
+
+.mission-card.completed {
+  border-color: var(--success);
+  background: rgba(16, 185, 129, 0.03);
+}
+
+.mc-left {
+  max-width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.difficulty-badge {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  width: fit-content;
+  text-transform: uppercase;
+}
+
+.difficulty-badge.low {
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid var(--success);
+  color: var(--success);
+}
+
+.difficulty-badge.moderate {
+  background: rgba(245, 158, 11, 0.1);
+  border: 1px solid var(--warning);
+  color: var(--warning);
+}
+
+.difficulty-badge.high {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid var(--error);
+  color: var(--error);
+}
+
+.mc-title {
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.mc-desc {
+  font-size: 12.5px;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.mc-right {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.reward-glow {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--primary);
+  text-shadow: 0 0 8px var(--primary-glow);
+  letter-spacing: 0.5px;
+}
+
+.mission-card.completed .reward-glow {
+  color: var(--success);
+  text-shadow: 0 0 8px rgba(16, 185, 129, 0.3);
+}
+
+.mission-card .cyber-btn {
+  font-size: 11px;
+  padding: 10px 20px;
+}
+
+.mission-card.completed .cyber-btn {
+  border-color: var(--success);
+  color: var(--success);
+}
+
+.mission-card.completed .cyber-btn:hover {
+  background: var(--success);
+  color: var(--bg-main);
+}
+
+/* 2. Active Mission Panel styles */
+.active-mission-panel {
+  padding: 35px;
+  min-height: 480px;
+  display: flex;
+  flex-direction: column;
+}
+
+.amp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 15px;
+  margin-bottom: 25px;
+}
+
+.amp-tag {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.mission-split {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 35px;
+  flex: 1;
+}
+
+/* First Trade Styles */
+.signal-desk {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.signal-title {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.asset-ticker-box {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.atb-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.atb-name {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.atb-price {
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.atb-status {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-top: 5px;
+}
+
+.atb-footnote {
+  font-size: 12.5px;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-top: 5px;
+}
+
+.trade-setup-desk {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.tsd-title {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.tsd-desc {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.tsd-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.help-text {
+  font-size: 10px;
+  color: var(--text-muted);
+  display: block;
+  margin-top: 4px;
+}
+
+.execute-trade-btn {
+  width: 100%;
+  font-size: 11px;
+  padding: 12px 0;
+  margin-top: 10px;
+}
+
+.tsd-feedback {
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid;
+  text-align: center;
+}
+
+.success-feedback {
+  background: rgba(16, 185, 129, 0.05);
+  border-color: var(--success);
+}
+
+.success-feedback p {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.success-feedback button {
+  font-size: 10px;
+  padding: 6px 18px;
+}
+
+/* Diversification Correlation Heatmap */
+.heatmap-section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.heatmap-title {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.heatmap-desc {
+  font-size: 12.5px;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.heatmap-grid-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background: rgba(1, 4, 15, 0.8);
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.heatmap-header-row,
+.heatmap-row {
+  display: grid;
+  grid-template-columns: 1.2fr repeat(5, 1fr);
+  gap: 4px;
+  text-align: center;
+}
+
+.hm-label-cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  height: 32px;
+  color: var(--text-muted);
+}
+
+.hm-label-cell.font-bold {
+  color: var(--text-main);
+  justify-content: flex-start;
+  padding-left: 8px;
+}
+
+.hm-val-cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 11.5px;
+  font-weight: 700;
+  border-radius: 4px;
+  height: 32px;
+  cursor: help;
+  color: var(--text-dark);
+}
+
+.alloc-desk {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.ad-title {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.ad-desc {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.ad-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.asset-checkboxes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.asset-check-card {
+  border: 1px solid var(--border-color);
+  background: rgba(15, 23, 42, 0.4);
+  padding: 12px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: var(--transition-normal);
+}
+
+.asset-check-card:hover {
+  background: var(--bg-card-hover);
+}
+
+.asset-check-card.active {
+  border-color: var(--accent);
+  background: rgba(139, 92, 246, 0.05);
+  box-shadow: 0 0 8px var(--accent-glow);
+}
+
+.checkbox-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1.5px solid var(--border-color);
+  transition: var(--transition-fast);
+}
+
+.asset-check-card.active .checkbox-dot {
+  border-color: var(--accent);
+  background-color: var(--accent);
+  box-shadow: 0 0 6px var(--accent);
+}
+
+.acc-name {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.div-score-panel {
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: center;
+  background: rgba(15, 23, 42, 0.5);
+}
+
+.dsp-lbl {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 1.5px;
+}
+
+.dsp-val {
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.verify-div-btn {
+  width: 100%;
+  font-size: 11px;
+  padding: 12px 0;
+  margin-top: 5px;
+}
+
+.ad-feedback {
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid;
+  text-align: center;
+}
+
+.ad-feedback p {
+  font-size: 12.5px;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.ad-feedback button {
+  font-size: 10px;
+  padding: 6px 18px;
+}
+
+.failed-feedback {
+  background: rgba(239, 68, 68, 0.05);
+  border-color: var(--error);
+}
+
+.failed-feedback .feedback-status {
+  color: var(--error);
+  font-weight: 700;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* 4. Weekly Market challenge view */
+.weekly-layout {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 30px;
+  flex: 1;
+}
+
+.weekly-feed {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.terminal-header {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.news-ticker-panel {
+  padding: 15px 20px;
+  background: rgba(1, 4, 15, 0.85);
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  font-family: monospace;
+}
+
+.ticker-line {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.sector-heatmap {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sh-title {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 1.5px;
+}
+
+.sh-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.sh-item {
+  background: rgba(15, 23, 42, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sh-item.positive {
+  border-color: rgba(16, 185, 129, 0.2);
+}
+
+.sh-item.positive .sh-val {
+  color: var(--success);
+}
+
+.sh-item.negative {
+  border-color: rgba(239, 68, 68, 0.2);
+}
+
+.sh-item.negative .sh-val {
+  color: var(--error);
+}
+
+.sh-item.neutral .sh-val {
+  color: var(--text-muted);
+}
+
+.weekly-decision {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.wd-title {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.wd-desc {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.wd-action-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.wd-action-grid .cyber-btn {
+  font-size: 11px;
+  padding: 12px 15px;
+  text-align: center;
+  width: 100%;
+}
+
+.wd-feedback {
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid;
+  text-align: center;
+}
+
+.wd-feedback p {
+  font-size: 12.5px;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.wd-feedback button {
+  font-size: 10px;
+  padding: 6px 18px;
+}
+
+/* Responsiveness */
+@media (max-width: 900px) {
+  .mission-split {
+    grid-template-columns: 1fr;
+  }
+  .weekly-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .mission-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  .mc-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .asset-checkboxes-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .sh-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}

@@ -1,0 +1,1363 @@
+--- PAGE 1 ---
+COGNIZANCE 2026
+APPNOV A ’26
+
+--- PAGE 2 ---
+NAME : Risk Raiders
+BRANCH : CSE
+INSTITUTE : ABES Engineering College
+
+TEAM
+DETAILS
+ARTHAQUEST Play the Market. Zero Risk. Real Learning.
+CITY: Ghaziabad
+EMAIL: gunshika.23b0121033@abes.ac.in
+CONTACT: +918979660550
+PERSONAL
+INFORMATION
+
+--- PAGE 3 ---
+USER MOTIVATION
+KEY BARRIERS
+Build confidence before investing
+Learn through practical knowledge
+Understand market conversations
+Complexity
+Fear
+Security issues
+Passive
+ Enjoy rewards and progression
+
+--- PAGE 4 ---
+UNIQUE FEATURES
+Quest-Based Learning
+Simulation driven practice
+Mission based training
+Explain My Mistake - AI Feedback
+Gamified Progression System
+Competitive Leaderboards and Leagues 
+
+ 
+
+--- PAGE 5 ---
+COMPETITIVE ANAL YSIS
+Company Name ARTHAQUEST ZERODHA INVESTOPEDIA
+Structured Learning
+Virtual Trading 
+Gamification
+Scenario-Based 
+Simulation Limited  
+Feedback (EMM)
+Leaderboard & 
+Progression
+TRADINGVIEW
+
+--- PAGE 6 ---
+Start
+Already a 
+Member?
+INFORMATION 
+ARCHITECTURE
+Login Register
+App setup 
+Homepage
+Quests Missions Labs
+Modules
+Progress Profile
+
+--- PAGE 7 ---
+Register
+Cover Login
+Home Notifications Modules
+Setup Goal Setup Risk
+Quest 
+
+List MissionsSimulation
+
+List
+Core Experience Layers
+SIMULATION ENGINE QUEST SYSTEM MISSION ENGINE
+
+--- PAGE 8 ---
+USER JOURNEY MAP
+ONBOARDING
+ EXPLORE
+ LEARN INTERACT REWARDS PERSONALIZE
+MISSIONS
+EARN XPAPP 
+SETUP
+XP & 
+DIAMONDS
+QUESTS
+EARN XPLOGIN REWARDS & 
+MISTAKES
+EXPLAIN MY 
+MISTAKE
+(AI ERROR BREAKDOWN)
+AI 
+PERSONALIZATION  
+(Strategy improvement, 
+AI reports)
+QUIZZES
+EARN XP
+SIMULATION 
+LABS
+EARN XP
+REGISTER
+TOUCHPOINT
+BADGE UNLOCK
+(T op performer)
+
+--- PAGE 9 ---
+LOW-FIDELITY 
+WIREFRAME
+
+--- PAGE 10 ---
+LOGIN PAGE
+ARTHAQUEST 
+AUTHENTICATION PROTOCOL
+USER_ID  
+ENCRYPTION KEY  
+Don’t have an account? Sign up
+BIOMETRIC SCAN 
+REGISTRATION PAGE
+ARTHAQUEST 
+AUTHENTICATION PROTOCOL
+NAME
+USER_ID  
+DATE OF BIRTH
+EMAIL ID
+ENCRYPTION KEY 
+CONFIRM ENCRYPTION KEY 
+Sign Up with GoogleCONFIRM ENCRYPTION KEY 
+Sign Up with Apple 
+Already have an account? Login
+INITIALIZE ACCESS
+APP SETUP
+Establish Identity
+Knowledge Scan
+Mission Objectives
+
+--- PAGE 11 ---
+HOMEPAGE
+LEVEL INDICATOR
+XP PROGRESS BAR
+HOME PAGE
+Daily Streak
+A n a ly t i c a l  O v e r v i e w
+Progress indicators
+KNOWLEDGE
+MASTERY PORTFOLIO
+GROWTH
+MISSION 
+STATUS
+Weekly challenge
+WEEKL Y MISSIONS SECTION
+Modules
+M O D U L E S
+MODULE 1 MODULE 2
+PROGRESS
+HOME QUESTS LABS MISSIONS PROGRESS PROFILE
+Profile Page
+PLA YER NAME
+P e r f o r m a n c e  M e t r i c s  S u m m a r y
+Current LEVEL T a r g et LEVEL
+XP PROGRESS BAR 
+GLOBAL RAN K  AN D  LEAGUE
+C urrent  M issions
+MISSION 1
+MISSION 2
+MISSION 3 Locked
+W ee k ly R et u rn C O NTR OL S C O R E
+D o w n l o a d  W e e k l y  R e p o r t
+HOME QUESTS LABS MISSIONS PROGRESS PROFILE
+P 
+ 
+ M
+ 
+ 
+  
+Leaderboard
+Global  L eaderboard
+- Week 12
+Global C ollege F riends
+1
+2 3
+4
+5
+6
+Y o u r  R a n k VIEW 
+PERFORMANCE
+HOME QUESTS LABS MISSIONS PROGRESS PROFILE
+Analytics Hub
+Analytics Hub
+P erformance  S napshot
+Win  Rate
+Risk Score
+I n d e x
+DE CISIO N  ACCURAC Y
+PR ED IC T IO N
+ENTRY
+EXIT
+RIS K MGMT
+GET Y OUR EMM REPORT HERE
+HOME QUESTS LABS MISSIONS PROGRESS PROFILE
+
+--- PAGE 12 ---
+HOME QUESTS LABS
+QUEST MAP 
+B A D G E
+S I P  M A C H I N E
+YAY !  y o u  e a r n e d  C o m p o u n d i n g  
+M a s t e r   b a d g e
+X P  P O I N T S
+YAY !  y o u  e a r n e d  S u r v i v o r  b a d g e
+M a r k e t  
+s u r v i v a l  q u e s tPROGRESS PROFILE
+B A D G E
+X P  P O I N T S
+B A D G E
+X P  P O I N T S
+B e g i n n e r  
+l e a r n i n g  
+q u e s t
+YAY !  y o u  e a r n e d  s t o c k  r o o k i e  b a d g e
+E X P L O R E  M I S S I O N S
+HOME QUESTS LABS MISSIONS PROGRESS PROFILE
+MISSIONS
+MISSION STACKS
+AI SUGGESTIONS
+SUGGESTION 1
+SUGGESTION 2
+CLICK HERE TO GET YOUR AI GENERATED REPORT
+REWARDS
+EARN XP POINTS
+MAKE IT TO 
+LEADERBOARD
+EARN BADGES
+UNLOCK MODULES
+HOME QUESTS LABS MISSIONS PROGRESS PROFILE
+SIMULATION 
+LABS 
+Lab 1
+Lab 2
+Lab 3
+Lab 4
+ENTER THE SIMULATION
+HOME QUESTS LABS MISSIONS PROGRESS PROFILE
+
+--- PAGE 13 ---
+LEVEL INDICATOR
+XP PROGRESS BAR
+A n a ly t i c a l  O v e r v i e w
+KNOWLEDGE
+MASTERY PORTFOLIO
+GROWTH
+WEEKL Y MISSIONS SECTION
+Resume
+MISSION 
+STATUS
+M O D U L E S
+MODULE 1 MODULE 2
+HOME QUESTS LABS PROGRESS PROFILE
+Analytics Hub
+Performance Snapshot
+Win Rate
+Risk Score
+I n d e x
+DECISION ACCURACY
+PREDICTION
+ENTRY
+EXIT
+RISK MGMT
+HOME QUESTS LABS MISSIONS PROGRESS PROFILE
+Explain My Mistake
+L e v e l  F a i l e d
+EMM Breakdown
+Trade Post-Mortem
+Visual Audit Portfolio e nh m
+400
+300
+200
+100
+0
+Mon Tue Wed Thu Fri Sat
+What Went Wrong
+O verexposed  to Tech
+N o  S top-Loss
+CRITICAL
+A I  I n s i g h t
+"You  reacted  2  days  late.  I f  you  had
+exited  at  the  $438  breach,  you  would
+have  saved  65%  of  the  total  loss."
+HOME QUESTS LABS MISSIONS PROGRESS PROFILE
+
+--- PAGE 14 ---
+HIGH-FIDELITY 
+WIREFRAME
+
+--- PAGE 15 ---
+INSIDE ARTHAQUEST
+COVER PAGE REGISTRATION LOGIN
+ARTHAQUEST 
+AUTHENTICATION PROTOCOL
+ARTHAQUEST 
+AUTHENTICATION PROTOCOL
+NAME
+USER_ID  
+DATE OF BIRTH
+EMAIL ID
+ENCRYPTION KEY 
+CONFIRM ENCRYPTION KEY 
+Enter the Financial 
+Metaverse
+USER_ID  
+Welcome to ArthaQuest. 
+A world where markets are 
+battlefields. 
+Risk is the villain. 
+Strategy is your weapon. 
+And every decision writes your 
+financial destiny.
+ENCRYPTION KEY  
+ARTHAQUEST 
+GAMIFIED FINANCIAL
+INTELLIGENCE
+Don’t have an account? Sign up
+LAUNCH SESSION
+START QUEST Sign Up with GoogleCONFIRM ENCRYPTION KEY 
+Sign Up with Apple 
+Already have an account? Login
+INITIALIZE ACCESS BIOMETRIC SCAN
+
+--- PAGE 16 ---
+APP SETUP
+
+--- PAGE 17 ---
+W e replace generic 
+onboarding with 
+strategic 
+positioning.   ESTABLISH
+ IDENTITY 
+Select your digital operative and initialize 
+your codename to begin the quest.
+STEP 01/03
+Every user starts their 
+journey with a well-defined 
+financial persona , and a 
+codename giving them 
+purpose.
+User’s  journey begins with 
+who they choose to be.
+[  U S E R  I N T E R FAC E _ P R OTO C O L :  N A M E _ E N T RY ]
+E N C R Y P T E D  C O N N E C T I O N   S E C U R E V . 0
+E N T E R  C OD E N A M E . . .       S CA N N I N G
+INITIALIZE QUEST 
+KNOWLEDGE
+SCAN
+LV L 0 1
+STEP 02/03
+R O O K I E
+N e w  t o  R e a l m . I  a m  h e r e
+t o  l e a r n  t h e  b a s i c s  o f  g o l d  a n d  g r o w t h  
+LV L 0 5
+S T R AT E G I S T
+Ta c t i c a l  P l a y e r. I  u n d e r s t a n d  t h e  
+m a r ke t s  b u t  w a n t  t o  m a s t e r  t h e  c r af t .
+LV L 1 0
+E X P E R T
+F i n a n c i a l  T i t a n . I ’ m  h e r e  t o  r e fi n e  m y  
+e m p i r e  a n d  c o n q u e r  c o m p l ex  q u e s t s .
+S E L E C T Y O U R  S TA R T I N G  F R E Q U E N C Y  T
+S Y N C H R O N I E  Y O U R  O U R N E Y
+ 
+INITIATE SEQUENCE 
+User becomes: 
+Rookie (Beginner),
+Strategist (Intermediate), 
+Expert (Advanced)
+So that no one feels dumb 
+selecting “Beginner”
+Users  define  what  they 
+want  to  master  in 
+the  market.
+S E L E C T Y O U R  P R I M A R Y  D I R E C T I V E S  TO  B E G I N  T H E  
+F I N A N C I A L S I M U L AT I O N  
+MISSION 
+OBJECTIVES 
+
+ WE A L TH G R OW TH  
+RISK M ANAGE M ENT 
+M ARKET MY STER Y  
+PASSIVE INCO M E
+ENTER T H E M ETAVERSE
+This setup guarantees 
+rele v ance right from 
+the start.
+
+--- PAGE 18 ---
+HOMEPAGE
+
+--- PAGE 19 ---
+THE ARTHAQUEST
+COMMAND 
+CENTER
+C HALLENGES
+•QUESTS – Structured Financial Progression
+Create direction and structured mastery
+•MISSIONS – Short-T erm Tactical Challenges
+Simulate real financial decision-making moments
+SIMULATIONS
+• LABS – Labs are hands-on training environments
+PROGRESS IN D I C ATORS
+•
+•
+•
+•
+•
+ XP & Level System 
+ Daily Streak Tracker 
+ Portfolio Performance Score 
+ Risk Control Score 
+ Leaderboard Ranking
+M odules  
+convert  
+complex  
+financial  
+theory  into  
+structured,  
+interactive  
+intelligence.
+H abit  loop
+LEVEL 4
+Welcome back, Alex
+XP  PROGRESS
+Q u a n t u m  V a u l t
+MODULE 02 / UNIT 04
+65%
+2,450
+ /  3,000
+SILVER IV
+Chapter 2: Correlation
+& Beta
+READING PROGRESS
+Understanding the mathematical symbiosis
+between asset price movements and systemic
+market risk.
+In the ArthaQuest ecosystem, risk management
+isn't just a safety net—it's a competitive
+advantage. Correlation measures the degree to
+which two assets move in relation to each 
+other.
+In the Quantum Vault, we move beyond simple
+linear models to analyze non-linear
+dependencies.
+The Fundamentals
+VIEW ALL
+While Correlation tells us direction, Beta tells us
+intensity. It is the measure of an asset's 
+volatility
+in relation to the overall market.
+Options Lab
+L ocked 
+u ntil L evel 10 .
+A Beta of 1.0 indicates the asset moves exactly
+with the market. High-performance Vault strategies
+often target assets with a Beta of >1.5 during
+bullish cycles for maximum Alpha extraction.
+Q u a n t u m  P r o  T i p
+PROGRESS
+A n a ly t i c a l
+ O v e r v i e w
+120
+5 DAY STREAK
+MISSION 
+STATUSH abit  loop
+PORTFOLIO
+GROWTH
+KNOWLEDGE
+MASTERY
+WEEKLY MARKET CHALLENGE
+F eedback  loop
+Resume
+M O D U L E S
++12.4% PERFORMANCE
+IntermediateIntermediate
+L earning  loop
+Beginner
+SENTINEL AI
+AI- driven trade 
+recommendations
+QUANTUM VAUL T
+W here assets are stored
+,  
+tracked
+,  and analy
+z ed.
+PROGRESS
+PROFILE
+PROFILE
+LABS
+HOME
+QUESTS LABS
+HOME
+QUESTS
+PROGRESS
+PROFILE
+LABS
+HOME
+QUESTS
+
+--- PAGE 20 ---
+QUEST ENGINE
+A system that creates tactical financial challenges where 
+users learn real-world investment decisions and earn 
+rewards through performance.
+
+--- PAGE 21 ---
+Beginner 
+Friendly Quest
+QUEST SYSTEM
+Market Survival 
+Quest SIP Machine
+
+--- PAGE 22 ---
+The Quest Map  
+transforms financial learning 
+into a visible progression 
+journey. 
+Users don’t randomly 
+browse content — they 
+unlock stages of mastery.
+QUEST MAP 
+C O M P O U N D I N G
+M A S T E R
+S I P  M A C H I N E
+YAY !  y o u  e a r n e d  C o m p o u n d i n g  
+M a s t e r   b a d g e
+C O M P L E T E D
++ 2 5 0 0  X P
+S U R V I V O R
+YAY !  y o u  e a r n e d  S u r v i v o r  b a d g e
+M a r k e t  
+s u r v i v a l  q u e s t
++ 2 0 0 0  X P
+C O M P L E T E D
+B e g i n n e r  
+l e a r n i n g  
+q u e s t
+YAY !  y o u  e a r n e d  s t o c k  r o o k i e  b a d g e
+R O O K I E
++ 1 5 0 0  X P
+C O M P L E T E D
+E X P L O R E  M I S S I O N S
+H OME Q UESTS LABS MISSIONS PRO G RESS PRO F ILE
+Gamification Framework: 
+Level-based progression, XP 
+rewards, badges, and visual 
+progress meters.
+ 
+
+Challenge & Mastery System: 
+Interactive quizzes, simulation-
+based objectives, and 
+performance-driven unlocks  
+
+--- PAGE 23 ---
+Beginner-Friendly Quest Concept Introduction Interactive Mini Challenge
+M I S S I O N  M
+W H A T I S  M O N E Y ?
+Badge  Locked
+Money  Aware
+Level  1  Progress:  1/3  Concepts
+Explored
+The beginner pathway is 
+intentionally structured 
+in 3 layers.
+QUEST MAP 
+C O M P O U N D I N G
+M A S T E R
+S I P  M A C H I N E
+YAY !  y o u  e a r n e d  C o m p o u n d i n g  
+M a s t e r   b a d g e
+BEGINNER FRIENDLY 
+QUEST STEP  01/04
++500 XP
+L e v e l  0 1
+THE SEED
+Master the foundations of saving and the
+psychological mechanics of wealth.
+C O M P L E T E D
++ 2 5 0 0  X P
+S U R V I V O R
+Store  of  Value
+Mone y  needs to hold its v alue ov e r
+tim e . I f you sa v e $10  tod ay,  it shoul d
+still b e a b le to b u y  something o f
+si m ilar v alue in the futu re .
+YAY !  y o u  e a r n e d  S u r v i v o r  b a d g e
+M a r k e t  
+s u r v i v a l  q u e s t
+L a u n c h  Q u e s t
++750 XP
+L e v e l  0 2
+GROWTH ENGINES
+Unlock the power of compound interest
+and mechanical asset scaling.
++ 2 0 0 0  X P
+C O M P L E T E D
+B e g i n n e r  
+l e a r n i n g  
+q u e s t
+YAY !  y o u  e a r n e d  s t o c k  r o o k i e  b a d g e
+M i n i  C h a l l e n g e
+Which  asset  loses  value  during
+inflation?
+Cash
+Gold
+R O O K I E
++1000 XP
+L e v e l  0 3
+THE FORTRESS
+Build your defensive layer through risk
+mitigation and emergency fund
+strategies.
++1500 XP
+L e v e l  0 4
+FIRE S TA RTER
+I gnite advanced wealth -b uilding tactic s
+and fi nancial independence accelerators.
++ 1 5 0 0  X P
+C O M P L E T E D
+E X P L O R E  M I S S I O N S
+n e x t  l e v e l
+HOM E QUESTS L AB S M ISSI O NS P R OG RESS P R O FILE
+HOM E QUESTS L AB S M ISSI O NS P R OG RESS P R O FILE HOM E QUESTS L AB S M ISSI O NS P R OG RESS P R O FILE
+
+--- PAGE 24 ---
+Market Survival Quest
+Live D ra wd o w n S c reen Mission: Market Survival
+QUEST MAP 
+? S I P  M A C H I N E
+W A N T  T O  K N O W  W H I C H  B A D G E  Y O U  
+W I L L  G E T ?
+ C O M P L E T E  T H I S  Q U E S T  T O  K N O W
+M i s s i o n  M
+MISSION: MARKET SURVIVAL
+C o n d i t i o n :  H i g h  V o l a t i l i t y
+M i s s i o n  D a n g e r :  L o s s  T h r e s h o l d  E x c e e d e d -22.4%
+CRITICAL
+Risk Level
+T o t a l  A s s e t s
+$50,000
+-4.28% (24H)
+.00 -$14,202
+L i v e  P / L S u r v i v a l  T i m e
+04:12A s s e s s m e n t
++ 1 5 0  X P
+S U R V I V O R
+C r a s h  T r a j e c t o r y -15.82%
+Y A Y !  y o u  e a r n e d  S u r v i v o r  b a d g e
+M a r k e t  
+s u r v i v a l  q u e s t
+R O O K I E B e g i n n e r  
+l e a r n i n g  
+q u e s t
+Y A Y !  y o u  e a r n e d  s t o c k  r o o k i e  b a d g e
++ 2 0 0 0  X P
+C O M P L E T E D
+CRITICAL
+R i s k  L e v e l
+LIVE DATA
+v e r e o s u r e  a r n i n g
+Technology
+85% ALLOCATED CRITICAL
+-18.4%
++ 1 5 0 0  X P
+C O M P L E T E D
+     
+E x e c u t e  C a p i t a l  S h i f t
+10.0%S t o L o s s  T h r e s h o l d
+D I V E R S I F Y L I Q U I D A T E
+E X P L O R E  M I S S I O N S
+NEWS
+HOME
+BREAKING: FED ANNOUNCES SURPRISE 50BPS RATE HIKE...
+QUESTS LABS MISSIO N S PROGRESS PROFILE
+HOME QUESTS LABS MISSIO N S PROGRESS PROFILE
+HOME QUESTS LABS PROGRESS PROFILE
+D I V E R S I F Y H E D E
+L I Q U I D A T EH L D
+Users face:
+
+• Market Survival under 
+   volatility. 
+• Compounding Shock 
+   realizations. 
+• Advanced Mode wealth 
+   optimization. 
+• Risk alerts & capital 
+  shift decisions.
+
+--- PAGE 25 ---
+SIP MACHINE QUEST SIP Machine DashboardCompounding Shock Screen
+S y s t e m  S t a t u s :  A c t i v e
+SIP MACHINE: WEALTH BUILDER S I P  M a c h i n e
+C O MP O UNDIN G  SHOCKQUEST MAP 
+C O M P O U N D I N G
+M A S T E R
+S I P  M A C H I N E
+YAY !  y o u  e a r n e d  C o m p o u n d i n g  
+M a s t e r   b a d g e
+E s t i m a t e d  W e a l t h
+$1.2 M
++342%  GAIN
+C O M P L E T E D
++ 2 5 0 0  X P
+L e v e l  1 0
+COMPOUND MASTER
+S U R V I V O R
+YAY !  y o u  e a r n e d  S u r v i v o r  b a d g e
+M a r k e t  
+s u r v i v a l  q u e s t Y EAR 10  REACHED
+In v e ste d M at ur i ty  Valu e
+₹6,00,000 ₹11,61,695+ 2 0 0 0  X P
+C O M P L E T E D
+Total  Invested
+$280,000
+Return  Amount
+$920,000
+B e g i n n e r  
+l e a r n i n g  
+q u e s t
+YAY !  y o u  e a r n e d  s t o c k  r o o k i e  b a d g e
+R O O K I E
+Weal th  ProjectionCOMPOUNDING  SHOCKEXPONENTIAL  GROWTH
+ANNUAL  RATE  (12%) TIME  (10  Y EAR S)
+$500
+25  Years
+12.5%
+Mon t hly  S IP
++ 1 5 0 0  X P
+C O M P L E T E D
+A dd  2  M or e  Ye ars
+T ime Hor i zon
+Wait!  By  adding  just  2 extra years,  your  maturity
+value  spikes  to  ₹15,12,000+.  That's  the
+compounding  shock.
+E X P L O R E  M I S S I O N S Expe cte d  R et urn
+HOME QUESTS LABS MISSIONS PROGRESS PROFILEHOME QUESTS LABS MISSIONS PROGRESS PROFILE HOME QUESTS LABS MISSIONS PROGRESS PROFILE
+The SIP Time 
+Machine lets 
+users adjust 
+investment time 
+and amount to 
+instantly see how 
+compounding 
+grows their wealth
+
+--- PAGE 26 ---
+SIMULATION LABS
+Labs arehands-on financial training 
+environments where users experiment.
+
+--- PAGE 27 ---
+PORTFOLIO 
+BUILDING LAB
+SIMULATION ENGINE
+MARKET 
+SCENARIO
+RISK MANAGEMENT 
+LAB VIRTUAL TESTING
+Bull Market
+High Volatility
+Recession Fear
+Market Crash
+IPO Launch
+
+--- PAGE 28 ---
+HOME QUESTS LABS PROGRESS PROFILE
+SIMULATION 
+LABS 
+Portfolio building lab1
+Risk Management Lab
+2
+3
+Virtual Trading Arena
+Market Scenario Mode
+4
+ENTER THE SIMULATION
+HOME QUESTS LABS MISSIONS PROGRESS PROFILE
+Portfolio Building 
+Lab
+Risk Management 
+Lab
+RISK MANAGEMENT 
+LABS 
+PORTFOLIO 
+BUILDING LAB
+Design your wealth engine
+Select your assets
+Good traders protect before they profit
+Entry Point: Risk / Reward
+1 0000 9 5 00 + 1 0 . 0 %
+Capital Investment
+Good traders protect before they profit
+Capital: 1 000000 1% - 5% max
+Automobile Technology Banking
+FMCG
+Add other assets
+Energy Healthcare
+Live Drawdown Control
+Current Drawdown:   -3.2%
+Bonds EFT Gold
+Risk Level
+moderate high
+Diversification Meter
+moderate high
+aggressive
+aggressive
+low
+Earn “Risk Master” Badge:
+Max drawdown <5%
+All trades protected
+No overpressure
+
+HOME QUESTS LABS MISSIONS PROGRESS PROFILE
+low
+Portfolio Health Score
+82
+Virtual Testing 
+Lab
+ VIRTUAL TESTING
+T otal  virtual  assets
+$ 1 00009 8. 7 8+ 0 . 0 1 %
+GLOBAL INDE X  PRICE4 , 2 5 0 . 5 0  
+1  H 1  D 1  W
+asset  allocation  mix
+equity
+debt
+gold
+60 %
+3 0 %
+1 0 %
+60 %
+3 0 %
+1 0 %
+risk
+high
+equity  
+allocation
+debt  
+instruments
+gold  and  
+commodities  
+BU Y SELL
+HOME QUESTS LABS MISSIONS PROGRESS PROFILE
+
+--- PAGE 29 ---
+Bull  Mar k e t
+Scenario
+T e s t your a b ility to trade duri n g s tro ng
+u pw ard tre n d s  a n d m a x i m i z e retur ns.
+Market Con d itions
+T r e n d Vo l at i l i t y
+Strong
+Uptrend
+Moderate
+S e n t i m e n t
+Greed /
+Optimism
+L i qu i d i t y
+High
+•
+•
+K ey Challenges
+Chasing overextended prices
+Ignoring risk due to FOMO
+•
+•
+Stra t egy Hi n ts
+Trade pullbacks in an uptrend
+Confirm higher highs/lows
+HOME QUESTS LABS MISSIONS PROGRESS PROFILE
+MARKET SCENARIO
+MODE
+P r a c t i c e  t h r o u g h  r e a l - w o r l d  s c e n a r i o s .
+PLAYBull Market
+Beginner
+High Volatility
+Advanced
+PLAY
+Recession Fears
+Elite
+PLAY
+Market Crash
+Black Swan
+PLAY
+IPO Launch
+Medium
+PLAY
+AI SUGGESTIONS
+Strategy Builder Mode
+G r o w  i n  B u l l  R a l l y
+M I S S I O N  2 :
+S u r v i v e  2 0 0 8  c r a s h
+M I S S I O N  1 :
+ L i m i t  l o s s  u n d e r  1 0 %
+ A v o i d  p a n i c  s e l l i n g
+ A c h i e v e  1 5 %  r e t u r n
+ R i d e  t h e  g r o w t h  w av e
+HOME QUESTS LABS MISSIONS PROGRESS PROFILE
+High  V olatility 
+Scenario
+Volatility
+V ery High
+T rend
+Rapid Swings
+S en ti men t
+Uncertain
+L i qu i d ity
+Fluctuating
+Simul a ti o n Obj e c ti v e
+Ma n age ri s k  a n d e x e c ute di s c i p li n ed trade s  w h il e
+n a v igati n g e x tre m e p ri c e fl u c tuatio ns.
+Sudden Spikes False  Breakouts Fast  Reversals
+S t r at eg y  H i n t s
+Smaller Size
+Wait  Confirm
+Wider Stops
+L a b  M i s s i o n s
+Spec  Badge
+2,100  X P
+Volatility Survivor
+C o mp lete 2  trade s 0/2
+Breakout Watcher
+Ide n ti f y 1  b rea k out 0/1
+Risk Controller
+K ee p  ri s k  <=  1 . 5%
+R UN  SIM U L AT IO N
+HOME QUESTS LABS MISSIONS PROGRESS PROFILE
+Hig h  Ri s k
+Recession Fear 
+Scenario
+Market Sentiment
+E x t r e m e Fear
+T rend
+Bearish
+Volatility
+Mod-High
+S en ti men t
+Fear
+L i qu i d ity
+W ea k ening
+S i m u l at i o n  O b j e c t i v e
+P re s er v e c a p ital a n d ide n ti f y de f e ns i ve
+o pp ortu n itie s  duri n g a re c e ss io n - dri v e n  m ar k et .
+C h a l l e n g e s S t r at e g y
+P anic  selling Reduce  ex posure
+W ea k  confidence D e f ensive  se c tors
+False  r allies Ris k  control
+L a b  M i s s i o n s
+Ca p ital D e f en d er
+L imit  ris k  ≤  1%
+Run Si m ulation
+HOME QUESTS LABS MISSIONS PROGRESS PROFILE
+
+--- PAGE 30 ---
+Hig h  Ri s k Tactical Training
+Market  C rash 
+Scenario
+T e s t your a b ility to s ur v i v e e x tre m e m ar k et s ell - o ffs  a nd
+p a n i c- dri v e n  v olatility .
+T rend Volatility
+Sharp Downtrend Extreme
+S entiment L iquidity
+Market Panic Unstable
+S i m u l a t i o n  O b j e c t i v e
+Protect your capital and maintain trading
+discipline during a sudden market collapse.
+K e y  C h a l l e n g e s
+Massive sell-offs Rapid price drops
+Panic-driven trading High volatility spikes
+L a b  M i s s i o n s
+Panic  Control: Avoid  trading  during  sell-
+offs
+Rebound Spotter:  Identify  1  recovery
+setup
+Run Si m ulation
+HOME QUESTS LABS MISSIONS PROGRESS PROFILE
+MARKET SCENARIO
+MODE
+P r a c t i c e  t h r o u g h  r e a l - w o r l d  s c e n a r i o s .
+PLAYBull Market
+Beginner
+High Volatility
+Advanced
+PLAY
+Recession Fears
+Elite
+PLAY
+Market Crash
+Black Swan
+PLAY
+IPO Launch
+Medium
+PLAY
+AI SUGGESTIONS
+Strategy Builder Mode
+G r o w  i n  B u l l  R a l l y
+M I S S I O N  2 :
+S u r v i v e  2 0 0 8  c r a s h
+M I S S I O N  1 :
+ L i m i t  l o s s  u n d e r  1 0 %
+ A v o i d  p a n i c  s e l l i n g
+ A c h i e v e  1 5 %  r e t u r n
+ R i d e  t h e  g r o w t h  w av e
+HOME QUESTS LABS MISSIONS PROGRESS PROFILE
+IPO  Launch 
+Scenario
+Navigate excitement while avoiding
+hype-driven mistakes.
+T rend V o l a tilit y
+U npredicta b le M om … H ig h
+Sentiment
+S peculati v e /  H ype
+K e y  C h a l l e n g e s
+O pening V ol a tility
+FOMO  P ressure
+O ver v alu a tion
+Rapid  P rice Spi k es
+L a b  M i s s i o n s
+01
+Li q uidit y
+S urging
+S t r a t e g y  H i n t s
+Avoid  initial  h ype
+W ait  f or  st ability
+Wat c h  volu m e
+Control  si z e
+IPO Analy s t
+O bserve  fir s t  session
+Mo m e n tu m T r ad er
+Identify  brea k out02
+Ris k  P rot e ct or
+L i m it  ris k  t o  ≤  2%03
+R UN  SIM U L A T IO N
+HOME QUESTS LABS MISSIONS PROGRESS PROFILE
+
+--- PAGE 31 ---
+MISSION ENGINE
+ A competitive environment where users test their 
+knowledge, complete financial challenges, and climb the 
+leaderboard.
+
+--- PAGE 32 ---
+FIRST TRADE 
+MISSION
+MISSION ENGINE
+WEEKLY MARKET 
+MISSION
+DIVERSIFICATION 
+MISSION
+RISK CONTROL 
+MISSION
+
+--- PAGE 33 ---
+MISSIONS
+4
+3
+2
+1
+MISSION STACKS
+AI SUGGESTIONS
+RISK MANAGEMENT 
+MISSION
+DIVERSIFICATION MISSION
+CLICK HERE TO GET YOUR AI GENERATED REPORT
+REWARDS
+EARN XP POINTS EARN BADGES
+MAKE IT TO 
+LEADERBOARD UNLOCK MODULES
+HOME QUESTS LABS MISSIONS PROGRESS PROFILE
+Mission Cards
+1First Trade 
+Mission
+D i f f i c u l t yE X E C U T E  YO U R  F I R ST T R A D E  W I T H  A  
+C O R R E CT STO P- LO S S  A N D  TA R G E T
+500 XPX P  R e wa r d :
+Diversification
+Mission 2D i f f i c u l t yB u i l d  a  p o r t f o l i o  w i t h  at l e a st 4  a s s e t 
+c l a s s e s  a n d  k e e p  t h e  d i v e r s i f i c at i o n  
+s c o r e  a b o v e  8 0 % .
+X P  R e wa r d : 1,200 XP
+Weekly Market
+Mission
+I D E N T I F Y  T H E  W E E K LY  M A R K E T T R E N D  A N D  
+P L A C E  O N E  ST R AT E G I C  T R A D E . 
+3D i f f i c u l t y
+X P  R e wa r d : 750 XP
+4A v a i l a b l e  N o w
+R isk C ontro l
+Mission
+C O M P L E T E  5  T R A D E S  W H I L E  K E E P I N G  
+D R AW D O W N  B E LO W  5 % . D i f f i c u l t y
+2, 5 00 XPX P  R e wa r d :
+HOME QUESTS LABS MISSIONS PROGRESS PROFILE
+ Each mission focuses on a specific investing skill:
+
+• First Trade Mission – Execute your first strategic
+   entry 
+• Diversification Mission – Balance risk using
+   correlation logic 
+• Weekly Market Mission – Respond to live sector
+   movements 
+• Risk Control Mission – Protect capital under
+   drawdown pressure
+
+--- PAGE 34 ---
+Mission 1:
+The First Exchange
+A new economic sector has
+emerged. Identify opportunity
+before volatility shifts.
+A c t i v e  A s s e t s
+R i s k  L e v e l
+LOW
+S e c t o r  7 - G
+SOLAR-CREDIT
+SC-4029 $2,441.20
++2.45%
+Mon Tue Wed
+SIGNAL
+Thu Fri Sat Sun
+Void-Index
+VX-0012
++12.89%
+$842.15
+S t r o n g  S i g n a l
+Neo-Lithium
+NL-8833 $12,900.00
+-0.12%
+I n i t i a t e  F i r s t  T r a d e
+HOME QUESTS LABS MISSIONS PROGRESS PROFILE
+DIV E RSI F Y  OR 
+D IE 100%
+Risk Shield
+LEVE L  4
+Y ield O pt .
++12.4%
+C o r r e l a t i o n  H e a t m a p ACTIVE_MATRIX_v2.0
+BT C S PY GLD T SLA B ND
+BT C
+S PY
+GLD
+T SLA
+B ND
+L ow  Correlation
+S cenario:  2008 CRAS H
+Simulate a liquidity crunch and
+-40% market drawdown.
+H igh
+Initiate Doom
+HOME QUESTS LABS MISSIONS PROGRESS PROFILE
+RIS K  CONTROL
+M i s s i o n  A l p h a
+H i g h  V o l a t i l i t y  D e t e c t e d :  I m m e d i a t e
+A c t i o n  R e q u i r e d
+WEEK 12  MAR K ET 
+MISSION
+04 : 22 : 59
+•  FED INTERES T  R A TE DECISION P ENDING •  TEC H  SE CT OR S H OWS U NE XP E C TED VOL A TILIT Y  •  C RYPT O  W H ALES MO VE $ 400 M  T O COLD S T ORAGE •  OI L  P RICES S T A B ILI Z E AT  $7 8.40 •  B REA K ING :  NE W  M ISSION RE W ARDS ANNO U NCED •
+8 0  %S e c t o r  H e a t m a p LIVE  UPDATE S
+TEC H
++ 4. 2 %
+FIN
++1 . 5 %
+ENG
+0. 0%
+RE
+- 2.1 %
+H L T H
++2 . 8 %
+CONS
+- 0 . 2 %
+U TIL
++0 . 8 %
+MA T
+- 3 .4% M AR K E T  CRAS H  I MM INENT :  INVES T ORS P ANIC
+Live  Portfolio  Value
+$ 50 , 000 USD
+BT C DRO P S B ELO W  $ 40 K
+P ast 2 4 H ours
+12.5%
+W e e k l y  P e r f o r m a n c e M S N - INDEX
+$ 4 , 281.50
++12 .4%  THI S  WEEK
+D i v e r s i f y H e d g e
+L i q u i d a t eS e t  S t o p - L o s s
+M ission B rie f ing Com p lete
+B EARIS HBU LLIS H HOME QUESTS LABS MISSIONS PROGRESS PROFILE
+HOME QUESTS LABS MISSIONS PROGRESS PROFILE
+
+--- PAGE 35 ---
+EXPLAIN MY 
+MISTAKE
+
+--- PAGE 36 ---
+M ISSION  F AI L ED
+Y o ur  c a p ital  prese rvati o n  stra te gy  was
+co m pro mi sed .
+F i n a l  R e t u r n R i s k  L i m i t
+- 22.4% EXCEEDED
+D r aw d ow n Stat u s
+25% T ER M INA T ED
+P o st- M o rt e m  A n a ly s i s
+Ov erexposure to high -v olatility ass e ts.•
+D elayed reaction to mar k e t sell-o ff .•
+Stop-loss l ev els w ere not strictly foll o w ed.•
+A N A L Y Z E  M I S T A K E S  ( E M M )
+R E T R Y  M I S S I O N
+L e v e l  F a i l e d
+EMM Breakdown
+T r a d e  P o st- M o rt e m
+Weekly Market 11
+-4.8% -$1,240.00 Lost
+Visual Audit Portfolio nh
+400
+300
+200
+100
+0
+Mon Tue Wed Thu Fri Sat
+What Went Wrong
+Overexposed to Tech
+82% of portfolio was concentrated in NVDA
+and TSLA during a sectoral rotation.
+No Stop-Loss
+Entry at $442 had no automated exit, leading
+to a "hope" trade strategy.
+CR I T I C A L
+A I  I n s i g h t
+" Y ou reacted 2 days lat e.  I f you ha d
+exited at the $4 3 8 b reach, you w oul d
+h av e sav ed 65 % of the total loss."
+HO M E QUES T S L ABS M ISSIONS P ROGRESS P RO F I L E
+EMM provides:
+• Trade post-mortem breakdown 
+• Stop-loss absence detection 
+• AI-powered corrective insights
+ 
+ 
+
+--- PAGE 37 ---
+PROFILE & 
+OTHERS
+
+--- PAGE 38 ---
+Global  L eaderboard
+- Week 12
+G l o b a l Co ll e g e Fri end s
+1
+2
+3
+M et a Qu e st_99
+22 , 150 XP
+C yb e rN o ma d
+18,420  XP
+V o rtex R a ce r
+16,800  XP
+A rtha_Titan
++2  positions
+14,200
+XP  P oints
+4
+L u na_ Ex p l o r e r
+Steady
+1 3 ,850
+XP  P oints
+5
+S ha dowD an c e r
+- 1  position XP  P oints
+1 3, 1006
+Y o u r  R a n k :  # 1 8
+9 , 2 40  XP  • T op  5% VIE W  PER FO RM A N CE
+18
+HOME QU ES T S LABS MISSIONS PROGRESS PRO F ILE
+Profile Page
+Alex
+LVL 14
+P e r f o r m a n c e  M e t r i c s  S u m m a r y LIVE DATA
+Current Rank
+LEVEL 04 LEVEL 05
+Target
+12,450 XP 15,000 XP
+Global Standing
+Rank #18 Silver Division
+C u r r e n t  M i s s i o n s
+Risk Management 101
+Derivative Basics
+Liquidity Pools
+85%
+42%
+Locked
+RISK
+72%Weekly Return Control Score
+D o w n l o a d  W e e k l y  R e p o r t
++5.4%
+YIELD
+HOME QU ES T S LABS MISSIONS PROGRESS PRO F ILE
+LEVEL
+PROGRESSION 
+
+ R isk  Aware 
+Investor LE V EL 6
+Hedging  S pecialist LE V EL 5
+C ompounding
+Architect LE V EL 4
+LE V EL 3 Asset  Allocator  
+LE V EL 2 Market  Explorer
+LE V EL 1 Beginner  level
+HOME QU ES T S LABS MISSIONS PROGRESS PRO F ILE
+
+--- PAGE 39 ---
+STYLE GUIDE
+Color Palette
+Primary Color
+00FFFF
+Secondary Color
+1E293B
+Accent Color Neutral Color
+Typography
+Aa Primary Font
+Space Grotesk
+
+--- PAGE 40 ---
+CONCLUSION
+Financial education fails when it remains theoretical. 
+ArthaQuest transforms it into an interactive, competitive, and reflective experience.
+We built:
+• A Quest-based progression system for
+   structured mastery 
+• A Mission-driven execution framework for
+   tactical decisions 
+• A Simulation & Lab engine for safe
+   experimentation 
+• A Competitive ecosystem with leagues and
+   leaderboards 
+ 
+t
+• And most importantly — 
+• Explain My Mistake 
+(EMM) to convert losses 
+into learning.
+
+--- PAGE 41 ---
+PROTOTYPE
+We invite you to step 
+into theARTHAQUEST
+ecosystem and 
+experience the journey 
+firsthand.
+PROTOTYPE ACCESS
+
